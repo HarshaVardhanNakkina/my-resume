@@ -2,10 +2,16 @@
 
 :root {
 	--header-font: 'Merriweather', Arial, Verdana, sans-serif;
-	--header-font-weight: 300;
-	--content-font: 'Quicksand', Arial, Verdana, sans-serif;
-	--content-font-weight: 500;
-	--description-font: 'EB Garamond', Arial, Verdana, sans-serif;
+  --header-font-weight: 400;
+  
+	--heading-font: 'Lato', Arial, Verdana, sans-serif;
+  --heading-font-weight: 700;
+  
+  --content-font: 'Quicksand', Arial, Verdana, sans-serif;
+  --content-font-weight: 500;
+
+  --subheading-font-weight: 600;
+  
 	--heading-color: #47a;
 	--gray: #aaa;
 	--light-gray: #e8e2e2;
@@ -35,21 +41,17 @@ ul {
 }
 
 .heading {
-	font-weight: bold;
+  font-family: var(--heading-font);
+	font-weight: var(--heading-font-weight);
 	color: var(--heading-color);
 }
 
 .subheading {
-	font-weight: 500;
-	/* margin-bottom: 4px; */
+	font-weight: var(--subheading-font-weight);
 }
 
-/* .subheading:last-of-type {
-	margin-bottom: 0;
-} */
-
 .subheading .rel-info {
-	font-weight: normal;
+	font-weight: 500;
 	float: right;
 	color: var(--dark-gray);
 }
@@ -69,28 +71,34 @@ ul {
 	background: var(--light-gray)
 }
 
-/* main-container styles */
+.divider {
+  width: 5px;
+  height: 960px;
+  margin: auto 3rem auto 0;
+  background-color: var(--light-gray);
+  border-radius: 10px;
+}
 
+/* main-container styles */
 .main-container {
 	width: 1120px;
 	margin: 2rem auto;
 	padding: 2.75rem;
-	display: flex;
-	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
 	line-height: 1.5rem;
 	font-family: var(--content-font);
-	font-weight: var(--content-font-weight);
+  font-weight: var(--content-font-weight);
 }
 
 /* left-container styles */
 
-.left-container {
-	margin-right: 2rem;
-}
 .contact-details {
 	font-style: normal;
 	display: flex;
-	flex-direction: column;
+  flex-direction: column;
+  width: min-content;
 }
 
 .contact-details a {
@@ -113,11 +121,13 @@ ul {
 .contact-details a[href^="mailto"] {
 	background-image: url(/icons/envelope-solid.svg);
 	background-repeat: no-repeat;
+	background-position-x: 3px;
 }
 
 .contact-details a[href^="tel"] {
 	background-image: url(/icons/phone-alt-solid.svg);
 	background-repeat: no-repeat;
+	background-position-x: 3px;
 }
 
 .contact-details .location {
@@ -129,7 +139,7 @@ ul {
 .contact-details .github {
 	background-image: url(/icons/GitHub-Mark-64px.png);
 	background-repeat: no-repeat;
-	background-position-x: 4px;
+	background-position-x: 3px;
 	background-position-y: 9px;
 
 }
@@ -159,7 +169,7 @@ ul {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	width: 100%;
+	/* width: 100%; */
 }
 
 header {
@@ -169,18 +179,18 @@ header {
 .name {
 	font-size: 2.5rem;
 	line-height: 2.5rem;
-	font-weight: var(--header-font-weight);
+  font-weight: var(--header-font-weight);
 	letter-spacing: 1px;
 	color: #000
 }
 
 .education-experience {
 	font-family: var(--content-font);
-	margin-top: 1rem;
+	margin-top: 1.5rem;
 }
-.education-experience:first-of-type {
+/* .education-experience:first-of-type {
 	margin-top: 2rem;
-}
+} */
 .qualification-job {
 	margin-top: 1.5rem;
 }

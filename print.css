@@ -1,23 +1,60 @@
+:root {
+	--header-font: 'Merriweather', Arial, Verdana, sans-serif;
+  --header-font-weight: 400;
+  
+	--heading-font: 'Lato', Arial, Verdana, sans-serif;
+  --heading-font-weight: 700;
+  
+  --content-font: 'EB Garamond', Arial, Verdana, sans-serif;
+  --content-font-weight: 500;
+
+  --subheading-font-weight: 600;
+  
+	--heading-color: #47a;
+	--gray: #aaa;
+	--light-gray: #e8e2e2;
+	--dark-gray: #111;
+}
+
+.divider {
+  margin: auto 1.5rem auto 0;
+  height: 1060px;
+}
+
 .main-container {
-	width: 850px;
-	padding: 15px;
-	padding-top: 0;
-	padding-top: 0;
-	box-shadow: none;
-	box-sizing: content-box;
+  width: 900px;
+  padding: 2rem 2.3rem;
+  margin: 1rem auto;
+  font-family: var(--heading-font);
+  font-weight: 400;
 }
 
 .name {
-	font-size: 2.75rem;
-	line-height: 2.75rem;
-}
-.subheading, .heading, .description, .technical-details, .contact-details {
-	font-family: 'Merriweather', Arial, Verdana, sans-serif;
-}
-.description {
-  font-size: 0.9rem;
+	font-size: 38px;
 }
 
-.left-container {
-	width: 425px;
+.heading {
+  font-family: var(--heading-font);
+	font-weight: var(--heading-font-weight);
+	color: var(--heading-color);
 }
+
+.subheading {
+  font-family: var(--heading-font);
+	font-weight: 400;
+}
+
+.subheading .rel-info {
+  font-family: var(--heading-font);
+	font-weight: 300;
+	float: right;
+	color: #111;
+}
+
+.description {
+  font-family: var(--heading-font);
+}
+
+/* .left-container {
+	width: 425px;
+} */
